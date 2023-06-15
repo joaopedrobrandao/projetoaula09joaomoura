@@ -4,10 +4,10 @@ const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 const sqlite3 = require('sqlite3').verbose();
-const DBPATH = '..data/imagens.db';
+const DBPATH = '../internet/imagens.db';
 
 const hostname = '127.0.0.1';
-const port = 3010;
+const port = 3005;
 const app = express();
 
 
@@ -23,7 +23,7 @@ app.use(express.urlencoded({extended:true}));
 const storage = multer.diskStorage({
 
   destination: function (req, file, cb) {
-    cb(null, './public/imagens')
+    cb(null, './public/imagens_do_pai')
   },
 
   filename: function (req, file, cb) {
