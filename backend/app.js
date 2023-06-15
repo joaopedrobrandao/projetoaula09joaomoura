@@ -3,7 +3,7 @@ const app = express();
 const sqlite3 = require('sqlite3').verbose();;
 const port = 3000;
 const path = require('path');
-const db = new sqlite3.Database('data/banco.db');
+const db = new sqlite3.Database('./data/banco.db');
 
 app.use(express.static("frontend"))
 
